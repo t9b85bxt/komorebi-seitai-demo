@@ -919,7 +919,7 @@ body::after {
 .staff-summary {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 56px;
   align-items: center;
   background: transparent;
   border-radius: 0;
@@ -1507,17 +1507,14 @@ body::after {
   box-shadow: none;
 }
 @media (min-width: 768px) {
-  .director-block { grid-template-columns: 320px 1fr; }
+  .director-block { grid-template-columns: 320px 1fr; gap: 56px; }
 }
 .director-block img { width: 100%; border-radius: var(--radius-image); aspect-ratio: 3/4; object-fit: cover; box-shadow: var(--shadow-soft); }
 .director-block .name { font-family: var(--font-heading); font-weight: 700; font-size: 26px; margin-bottom: 4px; }
 @media (min-width: 768px) {
-  .director-content { margin-left: -30px; padding-top: 24px; }
+  .director-content { padding-top: 24px; }
 }
 .staff-summary .content { position: relative; }
-@media (min-width: 768px) {
-  .staff-summary .content { margin-left: -30px; }
-}
 .director-block .qual { color: var(--color-text-sub); font-weight: 500; font-size: 14px; margin-bottom: 18px; }
 
 .staff-card {
