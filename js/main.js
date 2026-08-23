@@ -74,6 +74,7 @@
     }
   }
 
+
   // ---- ヘッダー: スクロールしたら影を強める ----
   const header = document.querySelector(".site-header");
   if (header) {
