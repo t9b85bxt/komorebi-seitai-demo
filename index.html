@@ -14,7 +14,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23E8B54D'/%3E%3Cstop offset='1' stop-color='%23C97C3D'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='16' fill='url(%23g)'/%3E%3Cpath d='M16 6c-5 3-7 8-4 15 1-5 4-8 8-9-3 1-5 3-6 6 4-1 7-5 6-10-1 2-2 3-4 4 1-2 1-4 0-6z' fill='white' fill-opacity='0.92'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Shippori+Mincho:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=17">
 </head>
 <body>
@@ -55,44 +55,36 @@
 
   <!-- 5-2 Hero -->
   <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="images/hero-main.webp" alt="木漏れ日が差し込む、こもれび整体院の施術個室">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <clipPath id="hero-wave-clip" clipPathUnits="objectBoundingBox">
+          <path d="M0.63,0 C0.50,0.10 0.30,0.15 0.26,0.30 C0.23,0.40 0.45,0.42 0.41,0.46 C0.35,0.55 0.05,0.60 0.08,0.70 C0.10,0.80 0.30,0.90 0.26,1 L1,1 L1,0 Z"/>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <svg class="hero-flow-line" viewBox="0 0 1000 260" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0 105 C150 60, 265 145, 410 125 C560 105, 650 65, 735 0 C825 -70, 900 -110, 1000 -120"/>
+      <g class="flow-leaf" transform="translate(250,100) rotate(-15)"><path d="M0,7 C4,-4 16,-4 20,7 C16,18 4,18 0,7 Z"/></g>
+      <g class="flow-leaf" transform="translate(600,55) rotate(20)"><path d="M0,7 C4,-4 16,-4 20,7 C16,18 4,18 0,7 Z"/></g>
+    </svg>
+
+    <div class="hero-photo">
+      <img src="images/hero-photo.png" alt="施術者が利用者の肩と腕をやさしく調整している様子" width="1600" height="1200">
     </div>
-    <div class="komorebi-dapple" aria-hidden="true"></div>
-    <div class="container hero-container">
-      <div class="hero-headline reveal">
-        <p class="hero-top-badge"><span aria-hidden="true">🌿</span>開業15年・累計施術50,000件+の実績</p>
-        <h1><span class="unit">がんばるあなたの体に、</span><br><span class="unit">木漏れ日のような</span><br><span class="unit">やすらぎを。</span></h1>
-        <p class="hero-lead">初めての方も、お一人お一人のペースに合わせて。まずはお気軽にご相談ください。</p>
-      </div>
-      <div class="hero-copy reveal">
-        <div class="hero-offer">
-          <div class="hero-offer-head">
-            <span class="offer-tag">初めての方へ</span>
-            <span class="offer-duration">初回60分</span>
-          </div>
-          <div class="offer-price">
-            <span class="offer-price-strike">通常6,800円</span>
-            <span class="offer-price-arrow" aria-hidden="true">→</span>
-            <span class="offer-price-now">3,980円</span>
-          </div>
-        </div>
 
-        <ul class="hero-facts">
-          <li>国家資格保有スタッフ在籍</li>
-          <li>開業15年・累計施術50,000件以上</li>
-        </ul>
-
-        <div class="btn-row hero-cta">
-          <a class="btn btn--primary btn--lg btn--block" href="index.html#final-cta">Web予約はこちら</a>
-        </div>
-        <p class="hero-cta-caption">24時間受付</p>
-
-        <a class="hero-tel" href="tel:0120123456"><span aria-hidden="true">📞</span>電話で相談する</a>
-
-        <p class="footnote">※自社調べ／集計期間: 開業〜2026年7月／通常価格での提供実績に基づく表示です</p>
-      </div>
+    <div class="hero-content reveal">
+      <h1 class="hero-title">動ける毎日は、<br>やさしい調整から。</h1>
+      <p class="hero-description">一人ひとりの身体に合わせた施術で、日常を軽やかに。</p>
     </div>
+
+    <a class="hero-cta" href="index.html#final-cta">初回相談を<br>予約する <span aria-hidden="true">→</span></a>
+
+    <ol class="hero-features">
+      <li class="hero-feature"><span class="hero-feature-number">01</span><span class="hero-feature-text">国家資格者が対応</span></li>
+      <li class="hero-feature"><span class="hero-feature-number">02</span><span class="hero-feature-text">完全予約制</span></li>
+      <li class="hero-feature"><span class="hero-feature-number">03</span><span class="hero-feature-text">土曜も診療</span></li>
+    </ol>
   </section>
 
   <!-- 5-3 選ばれる理由 -->
