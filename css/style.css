@@ -41,7 +41,12 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* position:fixed の要素などが原因で横スクロールが発生しても、
+     ページ全体としては横方向にはみ出させない安全策 */
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -524,13 +529,13 @@ body::after {
   letter-spacing: 0.03em;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .hero { min-height: 0; }
   .hero-photo {
     position: relative;
     inset: auto;
     width: 100%;
-    height: 260px;
+    height: clamp(260px, 38vw, 420px);
     clip-path: none;
   }
 }
@@ -561,7 +566,6 @@ body::after {
     margin-top: 10px;
     font-size: 19px;
     letter-spacing: 0.12em;
-    white-space: nowrap;
   }
 
   .hero-cta {
@@ -569,10 +573,8 @@ body::after {
     z-index: 8;
     top: 56.4%;
     left: 27.27%;
-    width: 9.09%;
-    min-width: 130px;
-    height: 14.4%;
-    min-height: 116px;
+    width: clamp(90px, 9.09vw, 152px);
+    height: clamp(88px, 8.12vw, 136px);
     font-size: 17px;
     line-height: 1.75;
     letter-spacing: 0.08em;
@@ -585,13 +587,13 @@ body::after {
     top: 73.4%;
     left: 7.7%;
     width: 16%;
-    min-width: 240px;
+    min-width: 200px;
     max-width: none;
     margin: 0;
   }
   .hero-feature {
     grid-template-columns: 48px 1fr;
-    min-height: 66px;
+    min-height: clamp(40px, 3.95vw, 66px);
   }
   .hero-feature-number { font-size: 19px; }
   .hero-feature-text { font-size: 17px; }
@@ -609,6 +611,12 @@ body::after {
   display: grid;
   gap: 24px;
   grid-template-columns: 1fr;
+}
+.grid > * {
+  /* grid-template-columns の 1fr トラックは既定で min-content 基準になるため、
+     長い日本語文（word-break: keep-all）があるとカードが押し広げられ横スクロールの原因になる。
+     min-width:0 でトラックが折り返しを許容できるようにする。 */
+  min-width: 0;
 }
 @media (min-width: 768px) {
   .grid--2 { grid-template-columns: repeat(2, 1fr); }
@@ -655,6 +663,11 @@ body::after {
   align-items: center;
   padding: 30px 4px;
   border-bottom: 1px solid var(--color-border);
+}
+.reason-body {
+  /* flex子要素は既定でmin-width:autoのため、長い日本語見出しが折り返せず
+     コンテナからはみ出すことがある。min-width:0で折り返しを許容する。 */
+  min-width: 0;
 }
 .reason-item:first-child { padding-top: 4px; }
 .reason-item:last-child { border-bottom: none; padding-bottom: 4px; }
@@ -717,6 +730,7 @@ body::after {
   .stats-row { grid-template-columns: repeat(4, 1fr); }
 }
 .stat-block {
+  min-width: 0;
   padding: 34px 18px;
   text-align: center;
   border-right: 1px solid rgba(107, 79, 39, 0.18);
@@ -786,6 +800,7 @@ body::after {
 .flow-step {
   position: relative;
   z-index: 1;
+  min-width: 0;
   text-align: center;
   padding: 0 0 24px;
   overflow: hidden;
@@ -1012,6 +1027,7 @@ body::after {
   gap: 28px;
   grid-template-columns: 1fr;
 }
+.access-grid > * { min-width: 0; }
 @media (min-width: 1024px) {
   .access-grid { grid-template-columns: 1.35fr 1fr; }
 }
@@ -1482,6 +1498,11 @@ body::after {
   border-radius: 0;
   padding: 0;
   box-shadow: none;
+}
+.director-block > * {
+  /* grid の 1fr トラックは既定で min-content 基準になるため、
+     画像や長い日本語文があるとブロックがはみ出すことがある。 */
+  min-width: 0;
 }
 @media (min-width: 768px) {
   .director-block { grid-template-columns: 320px 1fr; gap: 56px; }
