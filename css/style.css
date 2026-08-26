@@ -131,6 +131,7 @@ body::after {
 .section-head h2 {
   font-size: clamp(24px, 4vw, 34px);
   margin-bottom: 12px;
+  text-wrap: balance;
 }
 .section-head p {
   color: var(--color-text-sub);
@@ -985,10 +986,6 @@ body::after {
 .voice-card .comment { font-family: var(--font-accent); font-size: 14.5px; line-height: 1.9; color: var(--color-text); margin-bottom: 10px; }
 .voice-card .freq { font-size: 12px; color: var(--color-text-sub); }
 
-@media (min-width: 1024px) {
-  #voice-summary .grid--3 { grid-template-columns: 1.3fr 1fr 1fr; align-items: start; }
-}
-
 .voice-disclaimer {
   text-align: center;
   font-size: 12px;
@@ -1133,7 +1130,7 @@ body::after {
   margin-bottom: 32px;
 }
 @media (min-width: 768px) {
-  .footer-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1.4fr 1fr; }
 }
 .footer-logo { color: var(--color-white); font-family: var(--font-heading); font-size: 17px; margin-bottom: 12px; }
 .footer-grid h4 { color: var(--color-white); font-size: 13px; margin-bottom: 14px; letter-spacing: 0.05em; }
@@ -1532,28 +1529,35 @@ body::after {
 .training-block {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(160deg, var(--color-deep) 0%, var(--color-deep-light) 100%);
+  background: linear-gradient(175deg, var(--color-bg-2) 0%, #EDE8D8 100%);
   border-radius: var(--radius-image);
   padding: 40px 32px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-sub);
 }
 .training-block::before {
   content: "";
   position: absolute;
   inset: -20%;
   pointer-events: none;
-  filter: blur(22px);
-  mix-blend-mode: screen;
+  filter: blur(34px);
+  opacity: 0.55;
   background-image:
-    radial-gradient(circle at 15% 25%, rgba(244, 205, 115, 0.4) 0%, rgba(244, 205, 115, 0) 40%),
-    radial-gradient(circle at 85% 75%, rgba(244, 205, 115, 0.32) 0%, rgba(244, 205, 115, 0) 40%);
+    radial-gradient(circle at 14% 20%, rgba(232, 181, 77, 0.32) 0%, rgba(232, 181, 77, 0) 44%),
+    radial-gradient(circle at 88% 12%, rgba(107, 127, 91, 0.22) 0%, rgba(107, 127, 91, 0) 40%),
+    radial-gradient(circle at 78% 88%, rgba(232, 181, 77, 0.24) 0%, rgba(232, 181, 77, 0) 42%),
+    radial-gradient(circle at 16% 84%, rgba(107, 127, 91, 0.2) 0%, rgba(107, 127, 91, 0) 38%);
+  animation: komorebi-drift 58s ease-in-out infinite alternate;
 }
 .training-block .section-head { position: relative; margin-bottom: 24px; }
-.training-block .section-head .eyebrow { color: var(--color-gold-bright); }
-.training-block .section-head h2 { color: var(--color-white); }
+.training-block .section-head .eyebrow { color: #566B48; }
+.training-block .section-head h2 {
+  color: var(--color-canopy);
+  font-size: clamp(13px, 4.6vw, 30px);
+  white-space: nowrap;
+}
 .training-block ul { position: relative; display: flex; flex-direction: column; gap: 14px; }
-.training-block li { font-size: 14px; color: rgba(255, 255, 255, 0.8); }
-.training-block li strong { display: block; font-family: var(--font-accent); color: var(--color-gold-bright); font-size: 15px; margin-bottom: 4px; }
+.training-block li { font-size: 14px; color: var(--color-text-sub); }
+.training-block li strong { display: block; font-family: var(--font-accent); color: var(--color-primary-dark); font-size: 15px; margin-bottom: 4px; }
 
 /* ---------- お客様の声ページ ---------- */
 .filter-tabs {

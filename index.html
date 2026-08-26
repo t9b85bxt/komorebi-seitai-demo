@@ -26,26 +26,26 @@
     <a class="logo" href="index.html"><span class="leaf" aria-hidden="true">🌿</span>こもれび整体院</a>
     <nav class="main-nav" aria-label="グローバルナビゲーション">
       <ul>
-        <li><a href="index.html#price-summary">メニュー・料金</a></li>
-        <li><a href="index.html#staff-summary">院長・スタッフ</a></li>
-        <li><a href="index.html#voice-summary">お客様の声</a></li>
-        <li><a href="index.html#access">アクセス</a></li>
-        <li><a href="index.html#faq">よくある質問</a></li>
+        <li><a href="#price-summary">メニュー・料金</a></li>
+        <li><a href="#staff-summary">院長・スタッフ</a></li>
+        <li><a href="#voice-summary">お客様の声</a></li>
+        <li><a href="#access">アクセス</a></li>
+        <li><a href="#faq">よくある質問</a></li>
       </ul>
     </nav>
     <div class="header-actions">
       <a class="header-phone" href="tel:0120123456"><span aria-hidden="true">📞</span><span class="num">0120-123-456</span></a>
-      <a class="btn btn--primary header-book-btn" href="index.html#final-cta">Web予約はこちら</a>
+      <a class="btn btn--primary header-book-btn" href="#final-cta">Web予約はこちら</a>
       <button class="hamburger" aria-label="メニューを開く" aria-expanded="false"><span></span></button>
     </div>
   </div>
   <nav class="mobile-nav" aria-label="モバイルナビゲーション">
     <ul>
-      <li><a href="price.html">メニュー・料金</a></li>
-      <li><a href="staff.html">院長・スタッフ</a></li>
-      <li><a href="voice.html">お客様の声</a></li>
-      <li><a href="index.html#access">アクセス</a></li>
-      <li><a href="index.html#faq">よくある質問</a></li>
+      <li><a href="#price-summary">メニュー・料金</a></li>
+      <li><a href="#staff-summary">院長・スタッフ</a></li>
+      <li><a href="#voice-summary">お客様の声</a></li>
+      <li><a href="#access">アクセス</a></li>
+      <li><a href="#faq">よくある質問</a></li>
     </ul>
     <a class="mobile-nav-phone" href="tel:0120123456">📞 0120-123-456（電話予約もOK）</a>
   </nav>
@@ -78,7 +78,7 @@
       <p class="hero-description">一人ひとりの身体に合わせた施術で、日常を軽やかに。</p>
     </div>
 
-    <a class="hero-cta" href="index.html#final-cta">初回相談を<br>予約する <span aria-hidden="true">→</span></a>
+    <a class="hero-cta" href="#final-cta">初回相談を<br>予約する <span aria-hidden="true">→</span></a>
 
     <ol class="hero-features">
       <li class="hero-feature"><span class="hero-feature-number">01</span><span class="hero-feature-text">国家資格者が対応</span></li>
@@ -183,7 +183,7 @@
     </div>
   </section>
 
-  <!-- 5-6 メニュー・料金 要約 -->
+  <!-- 5-6 メニュー・料金 -->
   <section class="section section--alt" id="price-summary">
     <div class="container">
       <div class="section-head reveal">
@@ -194,12 +194,13 @@
       <div class="offer-card reveal">
         <div>
           <span class="tag">初めての方限定</span>
-          <div class="price">¥3,980<span class="strike">通常¥6,800</span></div>
+          <div class="price">¥3,980<span class="strike">通常¥6,800（約42%OFF）</span></div>
           <p class="footnote">カウンセリング＋検査＋施術目安（60分）／初回のみ・お一人様1回限り</p>
+          <p class="footnote">※通常価格での提供実績に基づく表示です</p>
         </div>
       </div>
 
-      <div class="grid grid--4">
+      <div class="grid grid--4 mb-40">
         <div class="card menu-card reveal">
           <img src="images/menu-thumb-1.webp" alt="やさしい全身もみほぐし" loading="lazy">
           <div class="body">
@@ -234,81 +235,216 @@
         </div>
       </div>
 
-      <div class="summary-cta">
-        <a class="link-more" href="price.html">全メニュー・回数券の詳細を見る →</a>
+      <div class="table-scroll reveal">
+        <table class="price-table">
+          <thead>
+            <tr><th>メニュー</th><th>時間</th><th>料金（税込）</th></tr>
+          </thead>
+          <tbody>
+            <tr><td rowspan="3">やさしい全身もみほぐし</td><td>30分</td><td class="price">¥3,300</td></tr>
+            <tr><td>45分</td><td class="price">¥4,800</td></tr>
+            <tr><td>60分</td><td class="price">¥6,800</td></tr>
+            <tr><td>肩・首集中ケア</td><td>30分</td><td class="price">¥3,300</td></tr>
+            <tr><td>骨盤調整コース</td><td>45分</td><td class="price">¥5,500</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid grid--2 mt-32">
+        <div class="option-list reveal">
+          <h3>オプションメニュー</h3>
+          <ul>
+            <li>ホットストーン　+¥1,000</li>
+            <li>EMSケア　+¥1,500</li>
+          </ul>
+        </div>
+        <div class="ticket-box reveal">
+          <h3>回数券のご案内</h3>
+          <p>11回分の料金で全12回ご利用いただける回数券をご用意しています（有効期限の目安：発行から6ヶ月）。</p>
+          <div class="reassure">回数券のご購入を無理におすすめすることはありません。まずは単発でのご利用からお気軽にどうぞ。</div>
+        </div>
+      </div>
+
+      <div class="note-list">
+        <p>※表示価格はすべて税込です</p>
+        <p>※回数券は本人限定・譲渡不可です</p>
+        <p>※効果には個人差があります</p>
       </div>
     </div>
   </section>
 
-  <!-- 5-7 院長・スタッフ 要約 -->
+  <!-- 5-7 院長・スタッフ -->
   <section class="section" id="staff-summary">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">院長・スタッフ紹介</span>
         <h2>あなたの体と丁寧に向き合います</h2>
       </div>
-      <div class="staff-summary reveal">
+
+      <div class="director-block reveal">
         <img src="images/staff-director.webp" alt="院長 木村誠" loading="lazy">
-        <div class="content">
+        <div class="director-content">
           <span class="profile-eyebrow">院長のご紹介</span>
           <p class="name">木村 誠（きむら まこと）</p>
-          <p class="role">こもれび整体院 院長｜柔道整復師</p>
-          <div class="profile-quote">「初めて整体院に来られる方は、不安があって当然だと思います。こもれび整体院では、まずお話を伺い、体の状態を一緒に確認することから始めます。ご納得いただいたうえで、無理のない施術をご提案します。」</div>
+          <p class="qual">こもれび整体院 院長</p>
+          <ul class="profile-facts">
+            <li>施術歴15年</li>
+            <li>東京都渋谷区で地域密着</li>
+            <li>肩こり・腰痛・姿勢調整を中心に対応</li>
+          </ul>
+          <div class="profile-quote">「大学卒業後、整形外科での勤務を経て、もっと一人一人の時間をかけて向き合いたいという思いから、こもれび整体院を開業しました。初めての方には特に丁寧なカウンセリングを心がけ、施術の内容や力加減もひとつひとつご説明しながら進めます。また明日を軽やかに迎えられるように、これからも一人一人のペースを大切にしていきます。」</div>
         </div>
       </div>
-      <div class="summary-cta">
-        <a class="link-more" href="staff.html">スタッフ紹介・院長の想いを詳しく見る →</a>
+
+      <div class="section-head reveal mt-56">
+        <span class="eyebrow">チームのご紹介</span>
+        <h2>スタッフ紹介</h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="staff-card reveal">
+          <img src="images/staff-sub-1.webp" alt="スタッフ 佐藤" loading="lazy">
+          <p class="name">佐藤 由美</p>
+          <p class="qual">鍼灸師</p>
+          <div class="profile-quote">「肩こり・首こりのケアが得意です。丁寧なカウンセリングを心がけています。」</div>
+        </div>
+        <div class="staff-card reveal">
+          <img src="images/staff-sub-2.webp" alt="スタッフ 田中" loading="lazy">
+          <p class="name">田中 拓也</p>
+          <p class="qual">柔道整復師</p>
+          <div class="profile-quote">「骨盤調整・姿勢改善の施術を専門としています。しっかりめの施術が得意です。」</div>
+        </div>
+        <div class="staff-card reveal">
+          <img src="images/staff-sub-3.webp" alt="スタッフ 鈴木" loading="lazy">
+          <p class="name">鈴木 愛</p>
+          <p class="qual">整体師</p>
+          <div class="profile-quote">「産後ケア・妊娠中の方の施術にも対応しています。やさしい力加減が好評です。」</div>
+        </div>
+      </div>
+
+      <div class="training-block reveal mt-56">
+        <div class="section-head">
+          <span class="eyebrow">研修方針</span>
+          <h2>当院がスタッフ研修で大切にしていること</h2>
+        </div>
+        <ul>
+          <li><strong>接客</strong>初めての方が緊張なくお話しいただけるよう、丁寧な言葉遣いと傾聴を徹底しています。</li>
+          <li><strong>衛生管理</strong>施術ベッド・タオル・器具は毎回消毒・交換し、清潔な状態を保っています。</li>
+          <li><strong>技術研鑽</strong>定期的な社内勉強会・外部研修への参加を通じて、施術技術の向上に努めています。</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- 5-8 お客様の声 要約 -->
+  <!-- 5-8 お客様の声 -->
   <section class="section section--alt" id="voice-summary">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">お客様の声</span>
         <h2>ご利用いただいた方の声</h2>
       </div>
+
+      <div class="voice-disclaimer reveal">
+        掲載している声はすべてデモ用のサンプルであり、実在の利用者の声ではありません。
+      </div>
+
+      <div class="filter-tabs reveal">
+        <button class="is-active" data-filter="all">すべて</button>
+        <button data-filter="肩こり">肩こり</button>
+        <button data-filter="腰痛">腰痛</button>
+        <button data-filter="産後ケア">産後ケア</button>
+        <button data-filter="姿勢改善">姿勢改善</button>
+      </div>
+
       <div class="grid grid--3">
-        <div class="card voice-card reveal">
+
+        <div class="card voice-card reveal" data-voice-tag="肩こり">
           <span class="demo-label">※デモ用のサンプルです</span>
           <div class="voice-head">
             <img src="images/voice-avatar-generic.svg" alt="" loading="lazy">
-            <div>
-              <p class="who">40代・女性</p>
-              <p class="tag">肩こり</p>
-            </div>
+            <div><p class="who">40代・女性</p><p class="tag">肩こり</p></div>
           </div>
           <div class="stars" aria-label="評価5段階中5">★★★★★</div>
           <p class="comment">デスクワークで固まった肩が、施術後は驚くほど軽くなりました。丁寧なカウンセリングも安心できました。</p>
+          <p class="freq">月2回通院中</p>
         </div>
-        <div class="card voice-card reveal">
+
+        <div class="card voice-card reveal" data-voice-tag="腰痛">
           <span class="demo-label">※デモ用のサンプルです</span>
           <div class="voice-head">
             <img src="images/voice-avatar-generic.svg" alt="" loading="lazy">
-            <div>
-              <p class="who">30代・男性</p>
-              <p class="tag">腰痛</p>
-            </div>
+            <div><p class="who">30代・男性</p><p class="tag">腰痛</p></div>
           </div>
           <div class="stars" aria-label="評価5段階中5">★★★★★</div>
           <p class="comment">力加減を細かく聞いてくれるので、痛みが強い日でも安心してお任せできます。</p>
+          <p class="freq">月1回通院中</p>
         </div>
-        <div class="card voice-card reveal">
+
+        <div class="card voice-card reveal" data-voice-tag="姿勢改善">
           <span class="demo-label">※デモ用のサンプルです</span>
           <div class="voice-head">
             <img src="images/voice-avatar-generic.svg" alt="" loading="lazy">
-            <div>
-              <p class="who">50代・女性</p>
-              <p class="tag">姿勢改善</p>
-            </div>
+            <div><p class="who">50代・女性</p><p class="tag">姿勢改善</p></div>
           </div>
           <div class="stars" aria-label="評価5段階中5">★★★★☆</div>
           <p class="comment">通うたびに姿勢が楽になっていくのを実感しています。スタッフの方も皆さん親切です。</p>
+          <p class="freq">月2回通院中</p>
         </div>
-      </div>
-      <div class="summary-cta">
-        <a class="link-more" href="voice.html">もっと見る（お客様の声一覧）→</a>
+
+        <div class="card voice-card reveal" data-voice-tag="肩こり">
+          <span class="demo-label">※デモ用のサンプルです</span>
+          <div class="voice-head">
+            <img src="images/voice-avatar-generic.svg" alt="" loading="lazy">
+            <div><p class="who">40代・男性</p><p class="tag">肩こり・首こり</p></div>
+          </div>
+          <div class="stars" aria-label="評価5段階中5">★★★★★</div>
+          <p class="comment">長年の肩こりが少しずつ楽になってきました。仕事終わりでも通いやすい時間帯が助かります。</p>
+          <p class="freq">週1回通院中</p>
+        </div>
+
+        <div class="card voice-card reveal" data-voice-tag="産後ケア">
+          <span class="demo-label">※デモ用のサンプルです</span>
+          <div class="voice-head">
+            <img src="images/voice-avatar-generic.svg" alt="" loading="lazy">
+            <div><p class="who">30代・女性</p><p class="tag">産後ケア</p></div>
+          </div>
+          <div class="stars" aria-label="評価5段階中5">★★★★★</div>
+          <p class="comment">産後の骨盤の歪みが気になっていましたが、やさしい力加減で安心して通えています。</p>
+          <p class="freq">月2回通院中</p>
+        </div>
+
+        <div class="card voice-card reveal" data-voice-tag="腰痛">
+          <span class="demo-label">※デモ用のサンプルです</span>
+          <div class="voice-head">
+            <img src="images/voice-avatar-generic.svg" alt="" loading="lazy">
+            <div><p class="who">60代・女性</p><p class="tag">腰痛</p></div>
+          </div>
+          <div class="stars" aria-label="評価5段階中5">★★★★☆</div>
+          <p class="comment">院内が落ち着いた雰囲気で、通うこと自体がリラックスの時間になっています。</p>
+          <p class="freq">月1回通院中</p>
+        </div>
+
+        <div class="card voice-card reveal" data-voice-tag="姿勢改善">
+          <span class="demo-label">※デモ用のサンプルです</span>
+          <div class="voice-head">
+            <img src="images/voice-avatar-generic.svg" alt="" loading="lazy">
+            <div><p class="who">40代・女性</p><p class="tag">姿勢改善</p></div>
+          </div>
+          <div class="stars" aria-label="評価5段階中5">★★★★★</div>
+          <p class="comment">デスクワークの姿勢が気になり通い始めました。日常生活での座り方のアドバイスも役立っています。</p>
+          <p class="freq">月2回通院中</p>
+        </div>
+
+        <div class="card voice-card reveal" data-voice-tag="肩こり">
+          <span class="demo-label">※デモ用のサンプルです</span>
+          <div class="voice-head">
+            <img src="images/voice-avatar-generic.svg" alt="" loading="lazy">
+            <div><p class="who">50代・男性</p><p class="tag">肩こり</p></div>
+          </div>
+          <div class="stars" aria-label="評価5段階中5">★★★★☆</div>
+          <p class="comment">初めは緊張しましたが、丁寧に説明してもらえたので安心して施術を受けられました。</p>
+          <p class="freq">月1回通院中</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -470,19 +606,11 @@
       <div>
         <h4>メニュー</h4>
         <ul>
-          <li><a href="index.html#price-summary">メニュー・料金</a></li>
-          <li><a href="index.html#staff-summary">院長・スタッフ</a></li>
-          <li><a href="index.html#voice-summary">お客様の声</a></li>
-          <li><a href="index.html#access">アクセス</a></li>
-          <li><a href="index.html#faq">よくある質問</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>詳細ページ</h4>
-        <ul>
-          <li><a href="price.html">料金・メニュー詳細</a></li>
-          <li><a href="staff.html">院長・スタッフ紹介</a></li>
-          <li><a href="voice.html">お客様の声・実績</a></li>
+          <li><a href="#price-summary">メニュー・料金</a></li>
+          <li><a href="#staff-summary">院長・スタッフ</a></li>
+          <li><a href="#voice-summary">お客様の声</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="#faq">よくある質問</a></li>
         </ul>
       </div>
     </div>
@@ -496,7 +624,7 @@
 <!-- 5-14 モバイル下部固定CTAバー -->
 <div class="mobile-cta-bar">
   <a class="call" href="tel:0120123456"><span aria-hidden="true">📞</span>電話で予約</a>
-  <a class="book" href="index.html#final-cta"><span aria-hidden="true">🌿</span>Web予約</a>
+  <a class="book" href="#final-cta"><span aria-hidden="true">🌿</span>Web予約</a>
 </div>
 
 <script src="js/main.js?v=6"></script>
